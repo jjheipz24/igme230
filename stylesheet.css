@@ -1,8 +1,17 @@
+/* Thanks to Emily, who assisted with a lot of the positioning of the portrait alongside the text*/
+
+
+/*Sets the default color of the text and makes the font Lato
+Makes the height fill the entire page*/
+
 html {
     font-family: 'Lato', sans-serif;
     color: #f4f7f5;
     height: 100%;
 }
+
+
+/*Makes height fill entire page and sets the overall background color*/
 
 body {
     min-height: 100%;
@@ -10,17 +19,19 @@ body {
     background-color: #0e0b16;
 }
 
+
+/*Sets color of the nav bar and clips content if it overflows*/
+
 #navbar {
     overflow: hidden;
     background-color: #0e0b16;
 }
 
-h1,
-h2 {
-    font-family: 'Exo', sans-serif;
-}
+
+/*Positions and formats the title of my website in the navbar*/
 
 #navbar h1 {
+    font-family: 'Exo', sans-serif;
     font-size: 3em;
     position: absolute;
     padding-left: 25px;
@@ -30,10 +41,17 @@ h2 {
 
 /*Referenced dropdown menu CSS from W3Schools.com*/
 
+
+/* Places the content of the dropdown menu over to the right */
+
 .dropdown {
     float: right;
     overflow: hidden;
 }
+
+
+/*Formatting for the dropdown menu buttons
+Sets the font size, color of the text, color of the button, and makes the cursor change to a pointer on hover*/
 
 .dropdown .dropbtn {
     font-size: 1em;
@@ -46,18 +64,30 @@ h2 {
     cursor: pointer;
 }
 
+
+/* Adds space between the button and the edge of the web page*/
+
 #projects {
     margin: 25px;
 }
+
+
+/* Adds space between the buttons*/
 
 #exercises {
     margin: 25px 0px 25px 25px;
 }
 
+
+/*Makes the buttons turn gray when they are hovered over*/
+
 .dropdown a:hover,
 .dropdown:hover .dropbtn {
     background-color: #8f94a3;
 }
+
+
+/*Makes background color of the exercises and projects white. Sets the minimum width of the content, adds a shadow behind the menu options, keeps the dropdown menu in front of all the content behind it*/
 
 .dropdown-content {
     display: none;
@@ -68,6 +98,9 @@ h2 {
     z-index: 1000;
 }
 
+
+/*Formatting for the text color of the items in dropdown menu*/
+
 .dropdown-content a {
     float: none;
     color: #0e0b16;
@@ -77,9 +110,16 @@ h2 {
     text-align: left;
 }
 
+
+/*Changes the color of the items in dropdown menu when hovered and makes the text bold*/
+
 .dropdown-content a:hover {
     background-color: #5bc0eb;
+    font-weight: bold;
 }
+
+
+/*Displays dropdown menu as a block element*/
 
 .dropdown:hover .dropdown-content {
     display: block;
@@ -87,6 +127,9 @@ h2 {
 
 
 /*Cover image taken from pexels.com. It's free for commericial and noncommercial use, and attribution is not required.*/
+
+
+/*Adds background cover image, gives it a set height, hides any content that overflows, adds a slight opacity, removes any borders*/
 
 .cover {
     background-image: url(images/code-bckgrnd.png);
@@ -98,27 +141,44 @@ h2 {
     border: none;
 }
 
+
+/*Sets the background color of the container and adds padding all around*/
+
 #container {
     background-color: #1b4079;
     padding: 100px;
 }
 
+
+/*Formatting for the h1 and h2 of the content
+Sets the font, font weight, makes the text center aligned, and center aligns the content in the box*/
+
 #container h1,
 h2 {
+    font-family: 'Exo', sans-serif;
     font-weight: 550;
     width: 50%;
     text-align: center;
     margin: 0 auto;
 }
 
+
+/*Sets the font size of the h1 in the container*/
+
 #container h1 {
     font-size: 40px;
 }
+
+
+/*Sets the font size and weight of the h2 in the container*/
 
 #container h2 {
     font-size: 30px;
     font-weight: 400;
 }
+
+
+/*Centers the content*/
 
 #content {
     width: 50vw;
@@ -126,6 +186,9 @@ h2 {
     position: relative;
     text-align: center;
 }
+
+
+/*Makes portrait image an inline-block object, gives it a max width to keep it small, adds a box shadow effect, and adds z-index to keep it above some content*/
 
 #portrait {
     display: inline-block;
@@ -135,12 +198,18 @@ h2 {
     z-index: 2;
 }
 
+
+/*Floats the image to the left and positions it next to the text*/
+
 #image {
     width: 80%;
     float: left;
     margin-top: -280px;
     margin-left: 10%;
 }
+
+
+/*Makes the text an inline-block and aligns it to the left. Sets the font size and width and adds spacing between the h1 and h2 text*/
 
 .descript {
     display: inline-block;
@@ -150,11 +219,8 @@ h2 {
     margin-top: 40px;
 }
 
-#spacing {
-    clear: both;
-    width: 100%;
-    text-align: center;
-}
+
+/* Positions the footer so it isn't right against the left side of the page*/
 
 footer {
     padding-left: 25px;
