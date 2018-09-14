@@ -6,7 +6,14 @@ body {
     font-size: 100%;
 }
 
-.main-header {}
+.cover {
+    background-image: url(images/code-bckgrnd.png);
+    background-size: cover;
+    width: 100%;
+    height: 250px;
+    opacity: 0.9;
+    border: none;
+}
 
 #navbar {
     overflow: hidden;
