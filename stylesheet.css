@@ -156,7 +156,7 @@ Sets the font, font weight, makes the text center aligned, and center aligns the
 #container h1,
 h2 {
     font-family: 'Exo', sans-serif;
-    font-weight: 550;
+    font-weight: 600;
     width: 50%;
     text-align: center;
     margin: 0 auto;
