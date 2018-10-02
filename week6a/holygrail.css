@@ -2,17 +2,22 @@
 General Formatting Rules
 ************************/
 
-* { box-sizing: border-box; }
+* {
+    box-sizing: border-box;
+}
 
 html {
     /* set base font-size for document; will be used for rem calculations */
     font-size: 16px;
 }
 
-html, body, #wrapper {
+html,
+body,
+#wrapper {
     /* resets margins to prevent sizing issues */
     margin: 0;
 }
+
 
 /*****************
 Flexbox Formatting
@@ -22,26 +27,44 @@ Flexbox Formatting
     /* centers container in viewport */
     margin: 0 auto;
     max-width: 95vw;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 main {
-
     /* formatting for visual clarity */
     border: 1px solid black;
     background-color: #ccc;
     margin: .5rem 0;
-
+    display: flex;
+    flex-direction: row;
+    flex: 1;
 }
 
-header, footer {
+nav {
+    order: -1;
+}
 
+aside,
+nav {
+    flex: 0 0 12rem;
+}
+
+article {
+    flex: 1;
+}
+
+header,
+footer {
     /* formatting for visual clarity */
     background-color: lightblue;
     padding: 0 .5rem;
 }
 
-article, nav, aside {
-
+article,
+nav,
+aside {
     /* formatting for visual clarity */
     border: 1px dotted black;
     background-color: #fff;
@@ -49,3 +72,19 @@ article, nav, aside {
     padding: .5rem;
 }
 
+@media screen and (max-width: 36rem) {
+    main {
+        flex-direction: column;
+        width: 100vw;
+    }
+    #wrapper {
+        max-width: none;
+    }
+    nav,
+    aside,
+    article {
+        order: 0;
+        flex: 1;
+        margin: .5rem 0;
+    }
+}
