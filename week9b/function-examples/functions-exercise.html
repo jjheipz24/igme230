@@ -22,7 +22,6 @@
         h1 {
             font-weight: 900;
         }
-
     </style>
 
 </head>
@@ -52,23 +51,34 @@
         //generates new list items from each item in arrays
 
         //color list items
-        let clrs = document.createElement("li");
-        for (let i = 0; i < colors.length; i++) {
-            let newListItem = document.createElement("li");
-            newListItem.innerHTML = colors[i];
-            let colorsList = document.querySelector("#colorsList");
-            colorsList.appendChild(newListItem);
-        }
+        /* for (let i = 0; i < colors.length; i++) {
+             let newListItem = document.createElement("li");
+             newListItem.innerHTML = colors[i];
+             let colorsList = document.querySelector("#colorsList");
+             colorsList.appendChild(newListItem);
+         }
 
-        //food list items
-        let food = document.createElement("li");
-        for (let i = 0; i < foods.length; i++) {
-            let newListItem = document.createElement("li");
-            newListItem.innerHTML = foods[i];
-            let foodList = document.querySelector("#foodsList");
-            foodList.appendChild(newListItem);
-        }
+         //food list items
+         for (let i = 0; i < foods.length; i++) {
+             let newListItem = document.createElement("li");
+             newListItem.innerHTML = foods[i];
+             let foodList = document.querySelector("#foodsList");
+             foodList.appendChild(newListItem);
+         }*/
 
+        //calls createList() for both arrays
+        createList("#colorsList", colors);
+        createList("#foodsList", foods);
+
+        function createList(listElement, array) {
+            for (let i = 0; i < array.length; i++) {
+                let newListItem = document.createElement("li");
+                newListItem.innerHTML = array[i];
+                let popList = document.querySelector(listElement);
+                popList.appendChild(newListItem);
+            }
+
+        }
     </script>
 
 </body>
