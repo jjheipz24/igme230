@@ -24,7 +24,7 @@
             console.log(`INSIDE func1(), B equals ${B}`); // "B" - "script scoped" b is visible
             B = "BB"; // change value of "script scoped" B
             let C = "C"; // declare a block-scoped C variable
-            debugger; // debugger breakpoint
+            //debugger; // debugger breakpoint
         }
 
         func1(); // call func1()
@@ -33,8 +33,7 @@
 
         console.log(`OUTSIDE func1() B equals ${B}`); // "BB" -  B is in scope
 
-        //console.log(`OUTSIDE func1() C equals ${C}`); // reference error! C is not defined
-
+        console.log(`OUTSIDE func1() C equals ${C}`); // reference error! C is not defined
 
     </script>
 </body>
