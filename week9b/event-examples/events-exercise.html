@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8" />
-	<title>Events Exercise</title>
-	<style>
-           @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
+    <meta charset="utf-8" />
+    <title>Events Exercise</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i');
 
 		html {
 			font-family:Lato, sans-serif;
@@ -29,19 +30,31 @@
 		}
 	</style>
 </head>
+
 <body>
 
-<div id="colorform">
-	<legend>Choose your favorite color!</legend>
-	<p><input type="radio" name="colorGroup" value="red" /> Red</p>
-	<p><input type="radio" name="colorGroup" value="green" /> Green</p>
-	<p><input type="radio" name="colorGroup" value="blue" /> Blue</p>
-	<p><button id="colorButton" type="button">Submit</button></p>
-	<p id="info"></p>
-</div>
+    <div id="colorform">
+        <legend>Choose your favorite color!</legend>
+        <p><input type="radio" name="colorGroup" value="red" /> Red</p>
+        <p><input type="radio" name="colorGroup" value="green" /> Green</p>
+        <p><input type="radio" name="colorGroup" value="blue" /> Blue</p>
+        <p><button id="colorButton" type="button">Submit</button></p>
+        <p id="info"></p>
+    </div>
 
-<script>
-/* Write your code here! */
-</script>
+    <script>
+        //let box = document.querySelector("#info");
+        let radios = document.querySelectorAll("input[name='colorGroup']");
+        for (var i = 0; i < radios.length; i++) {
+            radios[i].onclick = selectColor;
+        }
+
+        function selectColor() {
+            let clr = this.value;
+            document.querySelector("#info").innerHTML = "You have selected the color" + clr;
+        }
+
+    </script>
 </body>
+
 </html>
