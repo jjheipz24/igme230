@@ -45,13 +45,14 @@
     <script>
         //let box = document.querySelector("#info");
         let radios = document.querySelectorAll("input[name='colorGroup']");
+        //calls selectColor() for each radio button when clicked
         for (var i = 0; i < radios.length; i++) {
             radios[i].onclick = selectColor;
         }
 
         function selectColor() {
             let clr = this.value;
-            document.querySelector("#info").innerHTML = "You have selected the color" + clr;
+            document.querySelector("#info").innerHTML = "You have selected the color " + clr;
         }
 
     </script>
