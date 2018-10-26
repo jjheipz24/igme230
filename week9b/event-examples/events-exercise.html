@@ -39,20 +39,40 @@
         <p><input type="radio" name="colorGroup" value="green" /> Green</p>
         <p><input type="radio" name="colorGroup" value="blue" /> Blue</p>
         <p><button id="colorButton" type="button">Submit</button></p>
-        <p id="info"></p>
+        <p id="info">Pick a color!</p>
     </div>
 
     <script>
-        //let box = document.querySelector("#info");
-        let radios = document.querySelectorAll("input[name='colorGroup']");
+        let radios = document.querySelectorAll("input");
+        let submit = document.querySelector("#colorButton");
+        let legend = document.querySelector("legend");
+        let clrFinal = "undefined"; //var used to save color selection
+
         //calls selectColor() for each radio button when clicked
         for (var i = 0; i < radios.length; i++) {
             radios[i].onclick = selectColor;
         }
 
+        //makes final choice and changes legend element
+        submit.onclick = finalChoice;
+
+        //saves color value from element and prints the text with the color in the box
         function selectColor() {
             let clr = this.value;
+            clrFinal = this.value;
             document.querySelector("#info").innerHTML = "You have selected the color " + clr;
+        }
+
+        //tells the user to select a color if they try to hit submit before making a choice
+
+        //otherwise, prints text to the box and turns legend element text the color of the selection
+        function finalChoice() {
+            if (clrFinal == "undefined") {
+                document.querySelector("#info").innerHTML = "Please select a color first"
+            } else {
+                document.querySelector("#info").innerHTML = "Your FINAL CHOICE is " + clrFinal;
+                legend.style.color = clrFinal;
+            }
         }
 
     </script>
