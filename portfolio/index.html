@@ -12,18 +12,20 @@
 <body>
     <!--Navigation bar-->
     <section class="navbar">
-        <div id="nav-container">
-            <img id="logo" src="media/logo-small.png" alt="velociraptor with Jin Jin Heipler written on top">
-            <ul>
-                <li><a href="index.html" title="Home">Projects</a></li>
-                <li><a href="resume.html" title="Resume">Resume</a></li>
-                <!--Dropdown section of nav bar-->
-                <li class="dropdown">About<div class="about-content"><a href="who-am-i.html" title="Me">Who Am I?</a>
-                        <a href="contact.html" title="Contact">Contact</a>
-                    </div>
-                </li>
-            </ul>
+
+        <img class="logo" src="media/logo-small.png" alt="velociraptor with Jin Jin Heipler written on top">
+
+        <a href="index.html" title="Home">Projects</a>
+        <a href="resume.html" title="Resume">Resume</a>
+        <!--Dropdown section of nav bar-->
+        <div class="dropdown">
+            <button class="about" onclick="AboutMenu()">About</button>
+            <div class="about-content" id="dropdownMenu">
+                <a href="who-am-i.html" title="Me">Who Am I?</a>
+                <a href="contact.html" title="Contact">Contact</a>
+            </div>
         </div>
+
     </section>
 
     <!--Banner-->
@@ -64,6 +66,23 @@
             </div>
         </div>
     </footer>
+    <script>
+        /*Script for dropdown menu from W3Schools
+         *When user clicks button, content toggles between shown and hidden*/
+        function AboutMenu() {
+            document.getElementById("dropdownMenu").classList.toggle("show");
+        }
+
+        //closes dropdown if click outside it
+        window.onclick = function(event) {
+            if (!event.target.matches('.about')) {
+                var aboutMenu = document.getElementById("about-content");
+                if (aboutMenu.classList.contains('show')) {
+                    aboutMenu.classList.remove('show')
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
