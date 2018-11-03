@@ -13,16 +13,20 @@
     <!--Navigation bar-->
     <section class="navbar">
 
-        <img id="logo" src="media/logo-small.png" alt="velociraptor with Jin Jin Heipler written on top">
-        <ul>
-            <li><a href="index.html" title="Home">Projects</a></li>
-            <li><a href="resume.html" title="Resume">Resume</a></li>
+        <img class="logo" src="media/logo-small.png" alt="velociraptor with Jin Jin Heipler written on top">
+        <div class="page-nav">
+
             <!--Dropdown section of nav bar-->
-            <li class="dropdown">About<div class="about-content"><a href="who-am-i.html" title="Me">Who Am I?</a>
-                    <a href="contact.html" title="Contact">Contact</a>
+            <div class="dropdown">
+                <div class="about" onclick="AboutMenu()">About</div>
+                <div class="about-content" id="dropdownMenu">
+                    <a href="who-am-i.html" title="Me" id="me">Who Am I?</a>
+                    <a href="contact.html" title="Contact" id="contact">Contact</a>
                 </div>
-            </li>
-        </ul>
+            </div>
+            <a href="resume.html" title="Resume">Resume</a>
+            <a href="index.html" title="Home">Projects</a>
+        </div>
 
     </section>
     <main>
@@ -40,23 +44,47 @@
     <!--Footer-->
     <footer>
         <div class="footer-container">
-            <div class="footer-content">
+            <div class="left">
                 <p>How did I make this?</p>
-                <p>Find out <a href="documentation.html" title="Documentation"><i>here</i>
+                <p>Find out <a href="documentation.html" title="Documentation">here
                     </a></p>
             </div>
-            <div class="footer-content">
+            <div class="center">
                 <p>Questions? Email me!</p>
-                <p>heipler.jj&commat;gmail.com</p>
+                <a href="mailto:heipler.jj@gmail.com">heipler.jj&commat;gmail.com</a>
             </div>
-            <div class="footer-content">
+            <div class="right">
                 <p>Social Media</p>
-                <div id="icons">
-                    <!--INSERT SOCIAL MEDIA ICONS W/ LINKS-->
+                <!--ICONS FROM FONTAWESOME.COM-->
+                <div class="icons">
+                    <a href="https://www.facebook.com/jjheipz"> <i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="https://www.instagram.com/jjheipz24"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/jjheipler">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="https://www.github.com/jjheipz24"><i class="fab fa-github-square fa-lg"></i></a>
                 </div>
             </div>
         </div>
     </footer>
+    <script>
+        /* Script for dropdown menu from W3Schools
+         * When user clicks button, content toggles between shown
+         * and hidden */
+        function AboutMenu() {
+            document.getElementById("dropdownMenu").classList.toggle("show");
+        }
+
+        //closes dropdown if click outside it
+        window.onclick = function(e) {
+            if (!e.target.matches('.about')) {
+                var myDropdown = document.getElementById("dropdownMenu");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

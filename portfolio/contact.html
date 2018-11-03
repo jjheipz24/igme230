@@ -13,16 +13,20 @@
     <!--Navigation bar-->
     <section class="navbar">
 
-        <img id="logo" src="media/logo-small.png" alt="velociraptor with Jin Jin Heipler written on top">
-        <ul>
-            <li><a href="index.html" title="Home">Projects</a></li>
-            <li><a href="resume.html" title="Resume">Resume</a></li>
+        <img class="logo" src="media/logo-small.png" alt="velociraptor with Jin Jin Heipler written on top">
+        <div class="page-nav">
+
             <!--Dropdown section of nav bar-->
-            <li class="dropdown">About<div class="about-content"><a href="who-am-i.html" title="Me">Who Am I?</a>
-                    <a href="contact.html" title="Contact">Contact</a>
+            <div class="dropdown">
+                <div class="about" onclick="AboutMenu()">About</div>
+                <div class="about-content" id="dropdownMenu">
+                    <a href="who-am-i.html" title="Me" id="me">Who Am I?</a>
+                    <a href="contact.html" title="Contact" id="contact">Contact</a>
                 </div>
-            </li>
-        </ul>
+            </div>
+            <a href="resume.html" title="Resume">Resume</a>
+            <a href="index.html" title="Home">Projects</a>
+        </div>
 
     </section>
     <main>
@@ -58,6 +62,24 @@
             </ul>
         </div>
     </main>
+    <script>
+        /* Script for dropdown menu from W3Schools
+         * When user clicks button, content toggles between shown
+         * and hidden */
+        function AboutMenu() {
+            document.getElementById("dropdownMenu").classList.toggle("show");
+        }
+
+        //closes dropdown if click outside it
+        window.onclick = function(e) {
+            if (!e.target.matches('.about')) {
+                var myDropdown = document.getElementById("dropdownMenu");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>
