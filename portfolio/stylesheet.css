@@ -3,6 +3,10 @@ html {
     font-size: 16px;
 }
 
+body {
+    margin: 0;
+}
+
 /**********************************************************
 
 NAVIGATION BAR
@@ -19,6 +23,8 @@ NAVIGATION BAR
 
 .logo {
     float: left;
+    margin-left: 1.5%;
+    margin-top: 20px;
 }
 
 .page-nav {
@@ -48,6 +54,13 @@ NAVIGATION BAR
 .navbar a:hover,
 .about:hover {
     opacity: .8;
+}
+
+.logo:hover,
+.resume:hover,
+.projects:hover,
+.about:hover {
+    transform: scale(1.1);
 }
 
 /* dropdown content links */
@@ -83,15 +96,53 @@ NAVIGATION BAR
     display: block;
 }
 
-h1 {
-    font-weight: 700;
+/**********************************************************
+
+MAIN PAGE BANNER
+** downward arrow from Flat Icon **
+
+***********************************************************/
+
+header {
+    width: 100%;
+    margin: 0;
+    background-color: #2ca6a4;
+    color: white;
+}
+
+#banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #headshot {
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    border: 2.5px solid white;
+    margin-top: 30px
 }
+
+h1 {
+    font-weight: 700;
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+#banner-content h4 {
+    font-weight: 500;
+    font-size: 25px;
+    margin-top: -20px;
+    margin-bottom: 65px;
+}
+
+header img {
+    height: 50px;
+    width: 50px;
+}
+
+
 
 /**********************************************************
 
