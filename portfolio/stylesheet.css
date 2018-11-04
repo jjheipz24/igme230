@@ -153,11 +153,27 @@ h1 {
 /**********************************************************
 
 PROJECTS
-** some CSS from W3Schools Tutorial **
 
 ***********************************************************/
 #project-heading {
     text-align: center;
+}
+
+
+.project-sqrs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 5rem;
+    max-width: 65vw;
+    margin: .5rem auto;
+}
+
+.project-sqrs img {
+    display: block;
+    width: 100%;
+    border: 2px solid #2ca6a4;
+    border-radius: 5%;
+
 }
 
 
@@ -204,4 +220,8 @@ footer {
 
 .icons a {
     padding: 5px;
+}
+
+.icons i:hover {
+    transform: scale(1.1);
 }
