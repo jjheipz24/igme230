@@ -12,6 +12,9 @@ h2 {
     color: #2ca6a4;
     text-transform: uppercase;
     font-size: 40px;
+    text-align: center;
+    margin: 50px;
+    text-shadow: 1px 2px #a5abaf;
 }
 
 /**********************************************************
@@ -155,11 +158,6 @@ h1 {
 PROJECTS
 
 ***********************************************************/
-#project-heading {
-    text-align: center;
-    margin: 50px;
-
-}
 
 
 .project-sqrs {
@@ -179,6 +177,36 @@ PROJECTS
 
 }
 
+/**********************************************************
+
+WHO AM I
+** right arrow icon from Font Awesome **
+
+***********************************************************/
+
+#about-self {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#about-self p {
+    color: #2d2d2a;
+    font-weight: 500;
+    width: 500px;
+    line-height: 24px;
+    padding-left: 24px;
+
+}
+
+#about-text #contact-link {
+    text-align: right;
+}
+
+#contact-link a {
+    text-decoration: none;
+    color: #2ca6a4;
+}
 
 /**********************************************************
 
