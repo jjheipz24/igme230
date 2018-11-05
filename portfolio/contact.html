@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Asap:400,400i,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <title>Jin Jin Heipler - Contact</title>
 </head>
 
@@ -34,7 +35,7 @@
         <h2> Reach Out to Me!</h2>
 
         <!--Code followed from Mozilla Developer tutorial-->
-        <form action=" /non-existent-page" method="post">
+        <form action="https://formspree.io/heipler.jj@gmail.com" method="POST">
             <div>
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="user_name">
@@ -47,22 +48,37 @@
                 <label for="msg">Message:</label>
                 <textarea id="msg" name="user_message"></textarea>
             </div>
-            <div class="button">
-                <button type="submit">Send your message</button>
+            <div class="submit">
+                <button type="submit">Submit</button>
             </div>
         </form>
-
-        <div class="contact-links">
-            <ul>
-                <!--Don't forget to include icons!-->
-                <li>heipler.jj&commat;gmail.com</li>
-                <li>774-287-3077</li>
-                <li><a href="https://www.facebook.com/jjheipz">Facebook</a></li>
-                <li><a href="https://www.linkedin.com/in/jjheipler">LinkedIn</a></li>
-                <li><a href="http://www.github.com/jjheipz24">GitHub</a></li>
-            </ul>
-        </div>
     </main>
+    <!--Footer-->
+    <footer>
+        <div class="footer-container">
+            <div class="left">
+                <p>How did I make this?</p>
+                <p>Find out <a href="documentation.html" title="Documentation">here
+                    </a></p>
+            </div>
+            <div class="center">
+                <p>Questions? Email me!</p>
+                <a href="mailto:heipler.jj@gmail.com">heipler.jj&commat;gmail.com</a>
+            </div>
+            <div class="right">
+                <p>Social Media</p>
+                <!--ICONS FROM FONTAWESOME.COM-->
+                <div class="icons">
+                    <a href="https://www.facebook.com/jjheipz"> <i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="https://www.instagram.com/jjheipz24"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/jjheipler">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="https://www.github.com/jjheipz24"><i class="fab fa-github-square fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script>
         /* Script for dropdown menu from W3Schools
          * When user clicks button, content toggles between shown

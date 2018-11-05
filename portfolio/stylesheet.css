@@ -210,6 +210,74 @@ WHO AM I
 
 /**********************************************************
 
+CONTACT
+** Formspree.io used to make contact form work **
+** CSS used from Prof. Lawley's "Form" exercise **
+
+***********************************************************/
+
+form {
+    /*centers form on page*/
+    margin: 0 auto;
+    width: 500px;
+    /*to see outline of form*/
+    padding: 1em;
+    border-radius: 1em;
+    background-color: #2ca6a4;
+    box-shadow: -2px 4px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+form div + div {
+    margin-top: 2em;
+}
+
+label {
+    /*makes all labels equally sized and properly aligned*/
+    display: inline-block;
+    width: 90px;
+    text-align: center;
+    font-weight: 500;
+    color: white;
+    text-transform: uppercase;
+
+}
+
+input,
+textarea {
+    /*gives text field sans serif font*/
+    font: 1em sans-serif;
+    /*same size text fields*/
+    width: 300px;
+    box-sizing: border-box;
+
+}
+
+input:focus,
+textarea:focus {
+    /*highlight on active elements*/
+    border: 1px;
+    border-color: #82d4bb;
+}
+
+textarea {
+    /*aligns multiline text w labels*/
+    vertical-align: top;
+    /*breathing room*/
+    height: 5em;
+}
+
+.submit {
+    /*position buttons to same position of text fields*/
+    padding-left: 90px;
+    /*spacing*/
+    margin-left: .5em;
+
+}
+
+
+
+/**********************************************************
+
 FOOTER
 ** icons used from Font Awesome **
 
