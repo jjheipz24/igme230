@@ -179,6 +179,42 @@ PROJECTS
 
 /**********************************************************
 
+PROJECTS: SPACE WATCH
+
+***********************************************************/
+
+.proj-pic {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.task-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 90px;
+    background-color: #2ca6a4;
+    color: white;
+
+}
+
+.proj-text {
+    width: 500px;
+    line-height: 24px;
+}
+
+/**********************************************************
+
 WHO AM I
 ** right arrow icon from Font Awesome **
 
