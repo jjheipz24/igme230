@@ -179,7 +179,7 @@ PROJECTS
 
 /**********************************************************
 
-PROJECTS: SPACE WATCH
+INDIVIDUAL PROJECTS
 
 ***********************************************************/
 
@@ -215,6 +215,7 @@ PROJECTS: SPACE WATCH
     flex-direction: row-reverse;
     justify-content: space-evenly;
     align-items: center;
+    padding-bottom: 200px;
 }
 
 .proj-text {
