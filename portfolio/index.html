@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Asap:400,400i,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Jin Jin Heipler</title>
 </head>
 
@@ -39,7 +40,7 @@
             <h1>Hey! I'm Jin Jin</h1>
             <h4>a new media interactive developer</h4>
             <!--INSERT IN DOCUMENTATION:<div>Icons made by <a href="https://www.flaticon.com/authors/lucy-g" title="Lucy G">Lucy G</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>-->
-            <img src="media/down-arrow.png" alt="down arrow">
+            <img id="down-arrow" src="media/down-arrow.png" alt="down arrow">
         </div>
     </header>
 
@@ -98,7 +99,17 @@
                 }
             }
         }
-
+        /* Script for smooth scrolling used from Juan von Doom on Codepen.io
+         * https://codepen.io/jvondoom/pen/VvbrdY
+         * Scrolls down to project part of page
+         */
+        $(document).ready(function() {
+            $('#down-arrow').click(function() {
+                $('html, body').animate({
+                    scrollTop: $('#project-heading').offset().top
+                }, 700)
+            })
+        });
     </script>
 </body>
 

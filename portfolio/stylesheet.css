@@ -153,6 +153,10 @@ h1 {
     margin-bottom: 65px;
 }
 
+#down-arrow {
+    cursor: pointer;
+}
+
 /**********************************************************
 
 PROJECTS
