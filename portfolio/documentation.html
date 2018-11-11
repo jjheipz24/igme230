@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Asap:400,400i,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <title>Jin Jin Heipler - Documentation</title>
+</head>
+
+<body>
+    <!--Navigation bar-->
+    <section class="navbar">
+
+        <a href="index.html"><img class="logo" src="media/logo-small.png" alt="velociraptor with Jin Jin Heipler written on top"></a>
+        <div class="page-nav">
+
+            <!--Dropdown section of nav bar-->
+            <div class="dropdown">
+                <div class="about" onclick="AboutMenu()">About</div>
+                <div class="about-content" id="dropdownMenu">
+                    <a href="who-am-i.html" title="Me" id="me">Who Am I?</a>
+                    <a href="contact.html" title="Contact" id="contact">Contact</a>
+                </div>
+            </div>
+            <a href="resume.html" title="Resume" class="resume">Resume</a>
+            <a href="index.html#project-heading" title="Home" class="projects">Projects</a>
+        </div>
+
+    </section>
+    <h2>About the Site</h2>
+    <main id="doc-grid">
+        <div class="slide-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 10</div>
+                <img src="media/flowchart.jpg" style="width:100%">
+                <div class="text">Flowchart</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 10</div>
+                <img src="media/main-wire.jpg" style="width:100%">
+                <div class="text">Main - Wireframe</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 10</div>
+                <img src="media/about-wire.jpg" style="width:100%">
+                <div class="text">Who Am I - Wireframe</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 10</div>
+                <img src="media/contact-wire.jpg" style="width:100%">
+                <div class="text">Contact - Wireframe</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 10</div>
+                <img src="media/proj-wire.jpg" style="width:100%">
+                <div class="text">Project - Wireframe</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">6 / 10</div>
+                <img src="media/main1-mock.png" style="width:100%">
+                <div class="text">Main Concept 1 - Mockup</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">7 / 10</div>
+                <img src="media/main2-mock.png" style="width:100%">
+                <div class="text">Main Concept 2 - Mockup</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">8 / 10</div>
+                <img src="media/about-mock.png" style="width:100%">
+                <div class="text">About - Mockup</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">9 / 10</div>
+                <img src="media/contact-mock.png" style="width:100%">
+                <div class="text">Contact - Mockup</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">10 / 10</div>
+                <img src="media/proj-mock.png" style="width:100%">
+                <div class="text">Project - Mockup</div>
+            </div>
+
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </main>
+    <!--Footer-->
+    <footer>
+        <div class="footer-container">
+            <div class="left">
+                <p>How did I make this?</p>
+                <p>Find out <a href="documentation.html" title="Documentation">here
+                    </a></p>
+            </div>
+            <div class="center">
+                <p>Questions? Email me!</p>
+                <a href="mailto:heipler.jj@gmail.com">heipler.jj&commat;gmail.com</a>
+            </div>
+            <div class="right">
+                <p>Social Media</p>
+                <!--ICONS FROM FONTAWESOME.COM-->
+                <div class="icons">
+                    <a href="https://www.facebook.com/jjheipz"> <i class="fab fa-facebook fa-lg"></i></a>
+                    <a href="https://www.instagram.com/jjheipz24"><i class="fab fa-instagram fa-lg"></i></a>
+                    <a href="https://www.linkedin.com/in/jjheipler">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="https://www.github.com/jjheipz24"><i class="fab fa-github-square fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        /* Script for dropdown menu from W3Schools
+         * When user clicks button, content toggles between shown
+         * and hidden */
+        function AboutMenu() {
+            document.getElementById("dropdownMenu").classList.toggle("show");
+        }
+
+        //closes dropdown if click outside it
+        window.onclick = function(e) {
+            if (!e.target.matches('.about')) {
+                var myDropdown = document.getElementById("dropdownMenu");
+                if (myDropdown.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+        /* Script for automatic slideshow from W3Schools
+         * Cycles through 10 images automatically every 2 seconds */
+        var slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+
+</html>
