@@ -353,10 +353,132 @@ RESUME
 
 ***********************************************************/
 
+/*****************
+ Heading of resume
+******************/
+.resume-main {
+    color: #2ca6a4;
+}
+
+.resume-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#jj {
+    font-size: 38pt;
+}
+
+#tagline {
+    font-size: 18pt;
+    margin-top: -37px;
+    margin-bottom: 25px;
+}
+
+#profile {
+    font-weight: 400;
+    font-size: 12pt;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*****************
+ Contact of resume
+******************/
+
+.contact-strip {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-around;
+    border-top: 2px solid #2ca6a4;
+    border-bottom: 2px solid #2ca6a4;
+    margin: 20px 50px;
+}
+
+.contact-piece {
+    font-weight: 600;
+}
+
+/******************
+ Sections of Resume
+*******************/
+
+.resume-titles {
+    font-weight: 700;
+    font-size: 16pt;
+    margin: 0 50px;
+    border-bottom: 1px solid #2ca6a4;
+}
+
+.education,
+.work-exp,
+.prjcts,
+.skills,
+.xtra {
+    margin: 20px 50px;
+
+}
+
+#school,
+#major {
+    font-weight: 600;
+}
+
+.title-names {
+    font-size: 12pt;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.title-info {
+    font-weight: 400;
+    font-size: 10pt;
+    font-style: italic;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: -10px;
+}
+
+.programming,
+.software {
+    display: flex;
+    flex-direction: column;
+}
+
+#programming-title,
+#software-title {
+    font-weight: 600;
+    font-size: 12pt;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+li {
+    margin-left: -25px;
+}
+
+.xtra {
+    margin-bottom: 200px;
+}
+
+/* Sets layout of printed page */
 @page {
     size: 8.5in 11in portrait;
 }
 
+/* Styles appearing on printed document ONLY */
 @media print {
 
     .navbar,
@@ -366,6 +488,16 @@ RESUME
 
     body {
         margin: 1cm;
+    }
+
+    .contact-strip,
+    .resume-titles,
+    .education,
+    .work-exp,
+    .prjcts,
+    .skills,
+    .xtra {
+        margin: 20px 0;
     }
 }
 
