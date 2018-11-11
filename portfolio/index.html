@@ -16,7 +16,7 @@
     <section class="navbar">
 
         <a href="index.html"><img class="logo" src="media/logo-small.png" alt="velociraptor with Jin Jin Heipler written on top"></a>
-        <div class="page-nav">
+        <div class="page-nav" id="mypage-nav">
 
             <!--Dropdown section of nav bar-->
             <div class="dropdown">
@@ -29,6 +29,8 @@
             <a href="resume.html" title="Resume" class="resume">Resume</a>
             <!--Learned bookmark links from W3Schools https://www.w3schools.com/html/html_links.asp-->
             <a href="#project-heading" title="Home" class="projects">Projects</a>
+            <!--Hamburger Icon from FontAwesome-->
+            <a href="javascript:void(0);" class="hamburger" onclick="HamNav()"><i class="fas fa-bars fa-lg"></i></a>
         </div>
 
     </section>
@@ -146,6 +148,15 @@
                 }, 700)
             })
         });
+
+        function HamNav() {
+            var x = document.getElementById("mypage-nav");
+            if (x.className === "page-nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "page-nav";
+            }
+        }
     </script>
 </body>
 

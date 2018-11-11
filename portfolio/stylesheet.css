@@ -106,6 +106,21 @@ NAVIGATION BAR
     display: block;
 }
 
+.hamburger {
+    display: none;
+}
+
+/*********** RESPONSIVE *************/
+@media screen and(max-width: 650px) {
+    .page-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
 /**********************************************************
 
 MAIN PAGE BANNER
