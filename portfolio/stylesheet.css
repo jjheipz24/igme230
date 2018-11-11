@@ -619,7 +619,54 @@ Documentation
 
 }
 
+#process {
+    grid-column: 2/3;
+}
 
+#challenge {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+#challenge-text {
+    grid-column: 2/3;
+}
+
+#above {
+    grid-column: 2/3;
+}
+
+#above-text {
+    grid-column: 4/5;
+}
+
+#source {
+    grid-column: 4/5;
+}
+
+#source-text {
+    grid-column: 2/3;
+}
+
+.doc-headings,
+.doc-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.doc-headings p {
+    font-weight: 500;
+    font-size: 48px;
+    background-color: #2ca6a4;
+    color: white;
+    padding: 20px;
+
+}
+
+.doc-text {
+    line-height: 24px;
+}
 
 /**********
  Slideshow
