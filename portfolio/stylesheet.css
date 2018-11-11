@@ -425,6 +425,11 @@ RESUME
 
 }
 
+#pdf {
+    font-size: 10pt;
+    margin-left: 50px;
+}
+
 #school,
 #major {
     font-weight: 600;
@@ -482,7 +487,8 @@ li {
 @media print {
 
     .navbar,
-    footer {
+    footer,
+    #pdf {
         display: none;
     }
 
