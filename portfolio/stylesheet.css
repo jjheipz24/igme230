@@ -112,6 +112,7 @@ NAVIGATION BAR
 
 /*********** RESPONSIVE *************/
 @media screen and(max-width: 650px) {
+
     .page-nav {
         display: none;
     }
@@ -119,6 +120,8 @@ NAVIGATION BAR
     .hamburger {
         display: block;
     }
+
+
 }
 
 /**********************************************************
@@ -151,10 +154,7 @@ header {
 }
 
 /* Adds spacing between top of banner and picture */
-header img {
-    height: 50px;
-    width: 50px;
-}
+
 
 h1 {
     font-weight: 700;
@@ -175,6 +175,21 @@ h1 {
 
 #down-arrow:hover {
     transform: scale(1.08);
+}
+
+@media only screen and (max-width: 650px) {
+    h1 {
+        font-size: 8vw;
+        margin-top: 1vw;
+    }
+
+    #banner-content h4 {
+        font-size: 4vw;
+    }
+
+    #down-arrow {
+        width: 10vw;
+    }
 }
 
 /**********************************************************
