@@ -13,7 +13,7 @@
 
 <body>
     <!--Navigation bar-->
-    <section class="navbar">
+    <section id="navbar">
 
         <a href="index.html"><img class="logo" src="media/logo-small.png" alt="velociraptor with Jin Jin Heipler written on top"></a>
         <div class="page-nav">
@@ -30,8 +30,28 @@
             <!--Learned bookmark links from W3Schools https://www.w3schools.com/html/html_links.asp-->
             <a href="index.html#project-heading" title="Home" class="projects">Projects</a>
         </div>
-
     </section>
+    <div id="nav-mobile">
+        <!--Hamburger Icon from FontAwesome-->
+        <div class="hamburger"><i class="fas fa-bars fa-3x"></i></div>
+        <div id="menu-mobile">
+            <ul>
+                <a href="#project-heading">
+                    <li>Projects</li>
+                </a>
+                <a href="resume.html">
+                    <li>Resume</li>
+                </a>
+                <a href="who-am-i.html">
+                    <li>Who Am I?</li>
+                </a>
+                <a href="contact.html">
+                    <li>Contact</li>
+                </a>
+            </ul>
+        </div>
+    </div>
+
     <a id="pdf" href="media/resume2018.pdf" title="Resume PDF" download="JinJin_Resume">Click here to download a PDF version of my resume</a>
     <main class="resume-main">
         <div class="resume-name">
@@ -174,6 +194,21 @@
                 }
             }
         }
+        /* Script for hamburger menu used from Glenn Smith on Codepen.io
+         * https://codepen.io/g13nn/pen/eHGEF
+         * Hamburger-style menu for navigation
+         */
+        $(document).ready(function() {
+
+            $("#menu-mobile").hide();
+            $(".hamburger").click(function() {
+                $("#menu-mobile").slideToggle("slow", function() {
+
+                });
+            });
+
+
+        });
     </script>
 </body>
 
