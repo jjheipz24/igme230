@@ -115,6 +115,7 @@ NAVIGATION BAR
 
 
 /*********** RESPONSIVE *************/
+/*** makes regular nav bar "disappear" and creates hamburger nav bar ***/
 @media screen and (max-width: 800px) {
     #navbar {
         display: none;
@@ -227,6 +228,7 @@ h1 {
 }
 
 /*********** RESPONSIVE *************/
+/*** scales the banner text down and adjusts sizing of downward arrow ***/
 @media only screen and (max-width: 650px) {
     h1 {
         font-size: 8vw;
@@ -422,6 +424,7 @@ INDIVIDUAL PROJECTS
 }
 
 /*********** RESPONSIVE *************/
+/*** makes all project pages vertical ***/
 @media only screen and (max-width: 900px) {
     .content-horz {
         padding-bottom: 20vh;
@@ -628,6 +631,7 @@ li {
 }
 
 /*********** RESPONSIVE *************/
+/*** slight adjustments to contact strip and pdf link. Also, spacing between the two skills lists ***/
 @media only screen and (max-width: 800px) {
 
     .contact-piece,
@@ -677,6 +681,7 @@ WHO AM I
 }
 
 /*********** RESPONSIVE *************/
+/*** creates vertical about section ***/
 @media only screen and (max-width: 800px) {
     #about-self {
         flex-direction: column;
@@ -769,7 +774,7 @@ textarea {
 
 
 /*********** RESPONSIVE *************/
-@media only screen and(max-width: 650px) {}
+@media only screen and(max-width: 800px) {}
 
 
 /**********************************************************
@@ -951,6 +956,7 @@ Documentation
 }
 
 /*********** RESPONSIVE *************/
+/*** creates a single column of content ***/
 @media only screen and (max-width: 800px) {
     #doc-grid {
         grid-template-columns: 20% 1fr 20%;
@@ -1055,6 +1061,7 @@ footer {
 }
 
 /*********** RESPONSIVE *************/
+/*** makes footer vertical ***/
 @media only screen and (max-width: 650px) {
     body {
         padding-bottom: 20vh;
