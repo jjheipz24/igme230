@@ -814,6 +814,11 @@ Documentation
 
 #source-text {
     grid-column: 2/3;
+    grid-row: 4/5;
+}
+
+.doc-headings {
+    text-align: center;
 }
 
 .doc-headings,
@@ -834,6 +839,18 @@ Documentation
 
 .doc-text {
     line-height: 24px;
+}
+
+#source-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#source-text li {
+    padding: 1vw;
+
 }
 
 /**********
@@ -933,11 +950,59 @@ Documentation
     }
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .text {
-        font-size: 11px
+/*********** RESPONSIVE *************/
+@media only screen and (max-width: 800px) {
+    #doc-grid {
+        grid-template-columns: 20% 1fr 20%;
+        grid-template-rows: auto;
+        padding-bottom: 50vh;
     }
+
+    .text {
+        font-size: 11px;
+    }
+
+    .slide-container {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+
+    #process {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+
+    #challenge {
+        grid-column: 2/3;
+        grid-row: 3/4;
+    }
+
+    #challenge-text {
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+
+    #above {
+        grid-column: 2/3;
+        grid-row: 5/6;
+    }
+
+    #above-text {
+        grid-column: 2/3;
+        grid-row: 6/7;
+    }
+
+    #source {
+        grid-column: 2/3;
+        grid-row: 7/8;
+    }
+
+    #source-text {
+        grid-column: 2/3;
+        grid-row: 8/9;
+    }
+
+
 }
 
 /**********************************************************
