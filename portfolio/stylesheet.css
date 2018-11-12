@@ -609,7 +609,7 @@ li {
 /* Styles appearing on printed document ONLY */
 @media print {
 
-    .navbar,
+    #navbar,
     footer,
     #pdf {
         display: none;
