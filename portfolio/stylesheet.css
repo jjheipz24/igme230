@@ -640,8 +640,9 @@ WHO AM I
     }
 
     #about-text p {
-        width: 100%;
+        width: 80%;
         padding-left: none;
+        margin: 0 auto;
 
     }
 
