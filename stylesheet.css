@@ -135,31 +135,34 @@ Sets the font size, color of the text, color of the button, and makes the cursor
     background-image: url(images/code-bckgrnd.png);
     background-size: cover;
     background-position: 50%;
-    height: 225px;
+    height: 20vh;
     overflow: hidden;
     opacity: .9;
     border: none;
 }
 
 
-/*Sets the background color of the container and adds padding all around*/
+/*Sets the background color of the container and adds padding all around. Created flexbox to hold content*/
 
 #container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     background-color: #1b4079;
     padding: 100px;
 }
 
 
 /*Formatting for the h1 and h2 of the content
-Sets the font, font weight, makes the text center aligned, and center aligns the content in the box*/
+Sets the font, font weight, and makes the text center aligned*/
 
 #container h1,
 h2 {
     font-family: 'Exo', sans-serif;
     font-weight: 600;
-    width: 50%;
     text-align: center;
-    margin: 0 auto;
+
 }
 
 
@@ -175,49 +178,40 @@ h2 {
 #container h2 {
     font-size: 30px;
     font-weight: 400;
+    margin-top: -20px;
 }
 
 
-/*Centers the content*/
+/*Centers the content using flexbox*/
 
 #content {
-    width: 50vw;
-    margin: auto;
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40vw;
+    margin-left: 3vw;
+}
+
+#content p {
     text-align: center;
 }
 
-
-/*Makes portrait image an inline-block object, gives it a max width to keep it small, adds a box shadow effect, and adds z-index to keep it above some content*/
+/*gives img a max width to keep it small, adds a box shadow effect, and adds z-index to keep it above some content*/
 
 #portrait {
-    display: inline-block;
+
     max-width: 210px;
-    height: auto;
     box-shadow: 0px 8px 16px 5px rgba(0, 0, 0, 0.5);
     z-index: 2;
 }
 
 
-/*Floats the image to the left and positions it next to the text*/
 
 #image {
     width: 80%;
-    float: left;
-    margin-top: -280px;
-    margin-left: 10%;
+
 }
 
-
-/*Makes the text an inline-block and aligns it to the left. Sets the font size and width and adds spacing between the h1 and h2 text*/
-
-.descript {
-    display: inline-block;
-    text-align: left;
-    font-size: 24px;
-    width: 40%;
-    margin-top: 40px;
-}
 
 
 /* Positions the footer so it isn't right against the left side of the page*/
