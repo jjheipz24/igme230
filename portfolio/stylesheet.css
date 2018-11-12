@@ -146,30 +146,26 @@ NAVIGATION BAR
         font-size: 20px;
     }
 
-    #menu-mobile ul {
+    /* #menu-mobile ul {
         margin: 0;
         padding: 0;
         list-style-type: none;
-    }
+    } */
 
-    #menu-mobile li {
+    #menu-mobile a {
         display: block;
         padding: 15px 0 15px 0;
         border-bottom: 1px solid black;
+        text-decoration: none;
+        color: #2d2d2a;
+        text-transform: uppercase;
     }
 
-    #menu-mobile li:hover {
+    #menu-mobile a:hover {
         display: block;
         background: #e0cebf;
         padding: 15px 0 15px 0;
         border-bottom: 1px solid black;
-    }
-
-    #menu-mobile a {
-        text-decoration: none;
-        color: #2d2d2a;
-        text-transform: uppercase;
-
     }
 
 }
