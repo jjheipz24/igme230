@@ -1,10 +1,13 @@
 html {
     font-family: 'Asap', sans-serif;
     font-size: 16px;
+    height: 100%;
 }
 
 body {
     margin: 0;
+    position: relative;
+
 }
 
 h2 {
@@ -849,4 +852,30 @@ footer {
 
 .icons i:hover {
     transform: scale(1.1);
+}
+
+@media only screen and (max-width: 650px) {
+    body {
+        padding-bottom: 20vh;
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 20px;
+
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left,
+    .center,
+    .right {
+        margin: 10px;
+        text-align: center;
+    }
+
 }
