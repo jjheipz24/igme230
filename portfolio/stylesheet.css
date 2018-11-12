@@ -581,6 +581,22 @@ li {
     }
 }
 
+/*********** RESPONSIVE *************/
+@media only screen and (max-width: 800px) {
+
+    .contact-piece,
+    #pdf {
+        font-size: 2vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+
+    #programming {
+        padding-right: 5vw;
+    }
+
+}
+
 /**********************************************************
 
 WHO AM I
@@ -592,14 +608,16 @@ WHO AM I
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-bottom: 25vh;
 }
 
 #about-self p {
     color: #2d2d2a;
     font-weight: 500;
-    width: 500px;
+    width: 30vw;
     line-height: 24px;
     padding-left: 24px;
+
 
 }
 
@@ -612,6 +630,28 @@ WHO AM I
     color: #2ca6a4;
 }
 
+/*********** RESPONSIVE *************/
+@media only screen and (max-width: 800px) {
+    #about-self {
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+
+    }
+
+    #about-text p {
+        width: 100%;
+        padding-left: none;
+
+    }
+
+    #mtn {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 /**********************************************************
 
 CONTACT
@@ -621,14 +661,25 @@ CONTACT
 ***********************************************************/
 
 form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     /*centers form on page*/
     margin: 0 auto;
-    width: 500px;
+    width: 30vw;
     /*to see outline of form*/
     padding: 1em;
     border-radius: 1em;
     background-color: #2ca6a4;
     box-shadow: -2px 4px 3px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50vh;
+}
+
+.form-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 form div + div {
@@ -637,8 +688,7 @@ form div + div {
 
 label {
     /*makes all labels equally sized and properly aligned*/
-    display: inline-block;
-    width: 90px;
+    width: 9vw;
     text-align: center;
     font-weight: 500;
     color: white;
@@ -651,7 +701,7 @@ textarea {
     /*gives text field sans serif font*/
     font: 1em sans-serif;
     /*same size text fields*/
-    width: 300px;
+    width: 20vw;
     box-sizing: border-box;
 
 }
@@ -670,13 +720,10 @@ textarea {
     height: 5em;
 }
 
-.submit {
-    /*position buttons to same position of text fields*/
-    padding-left: 90px;
-    /*spacing*/
-    margin-left: .5em;
 
-}
+/*********** RESPONSIVE *************/
+@media only screen and(max-width: 650px) {}
+
 
 /**********************************************************
 
