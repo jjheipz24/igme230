@@ -180,6 +180,7 @@ h1 {
     transform: scale(1.08);
 }
 
+/*********** RESPONSIVE *************/
 @media only screen and (max-width: 650px) {
     h1 {
         font-size: 8vw;
@@ -315,16 +316,16 @@ INDIVIDUAL PROJECTS
 .proj-pic {
     max-width: 100%;
     height: auto;
+    margin-right: 20px;
+
 }
 
-.vert {
-    margin-right: 200px;
-}
-
-/* figure is default block --> scales images within flexbox
-** Learned from Baptiste Arnaud on Stack Overflow https://stackoverflow.com/questions/43759448/image-doesnt-scale-inside-flexbox */
-figure {
-    max-width: 100%;
+.link-img {
+    color: #2ca6a4;
+    font-weight: 400;
+    font-size: 14px;
+    margin-left: 2.5vw;
+    width: 100%;
 }
 
 
@@ -374,10 +375,50 @@ figure {
 
 }
 
-figcaption {
-    color: #2ca6a4;
-    font-weight: 400;
-    font-size: 14px;
+/*********** RESPONSIVE *************/
+@media only screen and (max-width: 900px) {
+    .content-horz {
+        padding-bottom: 20vh;
+    }
+
+    .content-vert {
+        width: 80%;
+        padding-bottom: 20vh;
+    }
+
+    #vert-img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .proj-pic {
+        padding-bottom: 2vh;
+    }
+
+    .first-part,
+    .solution-section {
+        flex-direction: column;
+        padding: 2vh;
+    }
+
+    .task-text,
+    .sol-text {
+        width: 100%;
+    }
+
+    .solution-section {
+        padding-bottom: 20vh;
+    }
+
+    .solution {
+        width: 85%;
+    }
+
+    .sol-text {
+        padding: 0;
+    }
+
 }
 
 /**********************************************************
@@ -854,6 +895,7 @@ footer {
     transform: scale(1.1);
 }
 
+/*********** RESPONSIVE *************/
 @media only screen and (max-width: 650px) {
     body {
         padding-bottom: 20vh;
