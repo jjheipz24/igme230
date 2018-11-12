@@ -962,6 +962,7 @@ Documentation
         grid-template-columns: 20% 1fr 20%;
         grid-template-rows: auto;
         padding-bottom: 50vh;
+        margin: 0 auto;
     }
 
     .text {
