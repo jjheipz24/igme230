@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="jquery-interaction/jquery-interaction/jquery.slidereveal.min.js"></script>
+    <title>Interactivity Exercise</title>
+    <style>
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+            background-color: skyblue;
+        }
+
+
+
+        #navpanel {
+            display: grid;
+            grid-template-columns: 100px 20px 1.5rem;
+            min-height: 200px;
+            max-height: 100%;
+            border: 1px solid black;
+            margin-bottom: 2em;
+            background-color: white;
+            position: fixed;
+            left: -100px;
+            z-index: 2;
+
+
+        }
+
+
+
+        #navtoggle {
+            grid-column: 3/4;
+            font-size: 3em;
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        #navmenu {
+            grid-column: 1/2;
+            width: 50px;
+            align-items: top;
+        }
+
+
+        #close {
+            display: none;
+        }
+
+        #open {
+            font-size: 3rem;
+        }
+
+        #toggleItem {
+            height: 25px;
+            width: 50px;
+            border: 1px solid;
+            text-align: center;
+            background-color: green;
+            z-index: 3;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            color: white;
+            font-weight: 400;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navpanel">
+        <div id="navtoggle"><span id="open">+</span><span id="close">-</span></div>
+
+        <div id="navmenu">
+
+            <p>Nav Menu</p>
+
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+                <li id="toggleItem">Item 3</li>
+                <div id="dropdown">
+
+                    <li>Data</li>
+                    <li>Data</li>
+                    <li>Data</li>
+
+                </div>
+            </ul>
+        </div>
+
+    </div>
+
+    <main>
+        <p>This page is super ugly, but I'm using a slide-out menu and a dropdown menu within it</p>
+    </main>
+    <script>
+        $("#close").click(function() {
+            $("#navpanel").animate({
+                left: '-100'
+            }, "slow");
+            $("#close").toggle();
+            $("#open").toggle();
+        });
+
+        $("#open").click(function() {
+            $("#navpanel").animate({
+                left: '0px'
+            }, "slow");
+            $("#close").toggle();
+            $("#open").toggle();
+        });
+        $("#dropdown").hide();
+        $("#toggleItem").click(function() {
+            $("#dropdown").slideToggle("slow");
+        });
+    </script>
+</body>
+
+</html>
