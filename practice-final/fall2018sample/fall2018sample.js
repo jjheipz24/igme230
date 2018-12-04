@@ -1,10 +1,7 @@
 /* Don't use <script> tags in a linked js file! */
 $(".submenu").hide();
-$("#menu1").click(function () {
-    $("#sub1").slideToggle("slow");
-});
-$("#menu2").click(function () {
-    $("#sub2").slideToggle("slow");
+$(".menuitem").click(function () {
+    $(this).next(".submenu").slideToggle("slow");
 });
 
 let content = ("content1.txt"); //sets default
