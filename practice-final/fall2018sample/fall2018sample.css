@@ -50,22 +50,27 @@ Your Formatting
 
 header {
     grid-column: 1/ -1;
+    /*grid-area: a;*/
 }
 
 aside {
     grid-column: 1/2;
+    /*grid-area: b;*/
 }
 
 article {
     grid-column: 2/3;
+    /*grid-area: c;*/
 }
 
 nav {
     grid-column: 3/4;
+    /*grid-area: d;*/
 }
 
 footer {
     grid-column: 1/-1;
+    /*grid-area: e;*/
 }
 
 aside,
@@ -104,6 +109,11 @@ footer {
     #wrapper {
         width: 100vw;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+        /*
+        grid-template-columns: 1f;
+        grid-template-areas: "a" "d" "b" "c" "e";
+        */
         grid-template-rows: auto;
     }
 
