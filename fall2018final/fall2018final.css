@@ -34,3 +34,123 @@ aside {
 /**************
 Your Formatting
 ***************/
+#mygrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 75px 30px 1fr 2fr 50px;
+    width: 90vw;
+    max-width: 1000px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+header {
+    grid-row: 1/2;
+    grid-area: "a";
+}
+
+nav {
+    grid-column: 1/-1;
+    grid-row: 2/3;
+    grid-area: "b";
+    background-color: lavenderblush;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    z-index: 1000;
+    /*align-items: center;*/
+}
+
+.top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    width: 6rem;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: .25rem;
+    background-color: #ddd;
+}
+
+aside {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    grid-area: "c";
+    background-color: lightblue;
+}
+
+article {
+    grid-column: 2/3;
+    grid-row: 3/5;
+    grid-area: "d";
+    background-color: lightcyan;
+}
+
+#extracredit {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    grid-area: "e";
+    background-color: lightblue;
+}
+
+footer {
+    grid-row: 5/6;
+}
+
+header,
+footer {
+    grid-column: 1/-1;
+    background-color: lightpink;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+    #mygrid {
+        width: 100vw;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-areas: 75px 30px auto auto auto 30px;
+    }
+
+    header,
+    nav,
+    article,
+    aside,
+    #extracredit,
+    footer {
+        grid-column: 1;
+    }
+
+    header {
+        grid-row: 1/2;
+    }
+
+    nav {
+        grid-row: 2/3;
+    }
+
+    article {
+        grid-row: 3/4;
+    }
+
+    aside {
+        grid-row: 4/5;
+    }
+
+    #extracredit {
+        grid-row: 5/6;
+    }
+
+    footer {
+        grid-row: 6/7;
+    }
+}
